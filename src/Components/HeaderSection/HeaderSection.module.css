@@ -1,0 +1,21 @@
+.HeaderSection {
+    width: 100%;
+    height: 300px;
+    background-image: url(https://media.npr.org/assets/img/2022/03/18/copy-of-lk_books_harlan-158_slide-269e5e230f84376afe6a69b23ce2f53771c50800.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    grid-template-areas: "header header"
+                         "input input"
+                         "setting setting";
+}
+
+.HeaderSection h1 {
+    color: #FFF;
+    padding: 30px 0;
+    grid-area: header;
+}

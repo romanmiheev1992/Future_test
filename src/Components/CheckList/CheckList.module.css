@@ -1,0 +1,30 @@
+.CheckList {
+    margin-top: 30px;
+    margin: 30px 10px 0 10px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    background: rgba(207, 207, 207, 0.205);
+    border-radius: 5px;
+}
+
+.CheckList p {
+    color: #fff;
+    font-weight: 600;
+}
+
+.CheckList select {
+    border: none;
+    outline: none;
+    height: 25px;
+    width: 100px;
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}
+
+.CheckList select option {
+    height: 20px;
+    color: rgb(182, 36, 36);
+    color: rgb(75, 75, 75);
+    font-weight: 600;
+}

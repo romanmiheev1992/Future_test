@@ -1,0 +1,64 @@
+.CardItem {
+    width: 100%;
+    height: 400px;
+    background: rgb(236, 236, 236);
+    border-radius: 10px;
+    cursor: pointer; 
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);  
+    transition: all .2s ease-in-out;
+    display: grid;
+    justify-content: center;
+}
+.emptyBlock {
+    width: 150px;
+    height: 200px;
+    margin: 20px;
+    justify-self: center;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.emptyBlock p {
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+.CardItem:hover {
+    background: rgb(218, 217, 217);
+    transform: translate(-1px, -1px);
+    -webkit-box-shadow: 8px 10px 11px 4px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 8px 10px 11px 4px rgba(34, 60, 80, 0.2);
+    box-shadow: 8px 10px 11px 4px rgba(34, 60, 80, 0.2);
+}
+.CardItem img {
+    margin-top: 20px;
+    height:  200px;
+    justify-self: center;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.CardItem p:nth-child(2){
+    color: rgb(75, 75, 75);
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+.CardItem p:nth-child(3){
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.CardItem p:nth-child(4){
+    color: rgb(0, 0, 0);
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 13px;
+}

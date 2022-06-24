@@ -1,0 +1,207 @@
+.BookPage {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "img category"
+                         "img author"
+                         "img title"
+                         "img description";
+                         grid-gap: 20px;
+    justify-content: start;
+    background: none !important;
+}
+.emptyBlock {
+    grid-area: img;
+    margin: 20px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.emptyBlock p {
+    margin-top: 100px;
+}
+
+.BookPage img {
+    grid-area: img;
+    width: 200px;
+    margin: 20px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        
+}
+.categories {
+    grid-area: category;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: rgb(161, 161, 161);
+    justify-self: start;
+    align-self: start;
+    background: rgb(219, 219, 219);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);  
+}
+
+.authors {
+    grid-area: author;
+    font-weight: bold;
+    justify-self: start;
+}
+
+.title {
+    grid-area: title;
+    text-decoration: underline;
+    justify-self: start;
+}
+
+.description {
+    grid-area: description;
+    justify-self: start;
+    text-align: left;
+    color: rgb(49, 49, 49);
+    padding: 20px 30px;
+    justify-self: start;
+    border-radius: 10px;
+    align-self: start;
+    background: rgb(219, 219, 219);
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);  
+}
+
+.loaderBookPage {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    display: grid;
+    grid-template-areas: "img category"
+                         "img author"
+                         "img title"
+                         "img description";
+                       
+    justify-content: start;
+}
+
+.loaderBookPage div:first-child {
+    grid-area: img;
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    background: rgb(224, 224, 224);
+    animation: load 2s ease-in-out .3s forwards infinite;
+}
+
+.loaderBookPage div:nth-child(2) {
+    grid-area: category;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    background: rgb(224, 224, 224);
+    animation: load 2s ease-in-out .6s forwards infinite;
+}
+
+.loaderBookPage div:nth-child(3) {
+    grid-area: author;
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    background: rgb(224, 224, 224);
+    animation: load 2s ease-in-out .9s forwards infinite;
+}
+
+.loaderBookPage div:nth-child(4) {
+    grid-area: title;
+    margin-left: 20px;
+    width: 300px;
+    height: 30px;
+    background: rgb(224, 224, 224);
+    animation: load 2s ease-in-out 1.2s forwards infinite;
+}
+
+.loaderBookPage div:nth-child(5) {
+    grid-area: description;
+    margin-left: 20px;
+    width: 500px;
+    height: 150px;
+    background: rgb(224, 224, 224);
+    animation: load 2s ease-in-out 1.5s forwards infinite;
+}
+
+
+
+
+
+
+@media (max-width: 880px) {
+
+    .BookPage, .loaderBookPage  {
+        grid-template-areas:    "img category"
+                                "img title"
+                                "img author"
+                                
+                                "description description";
+       grid-template-columns: 250px 1fr;
+       grid-template-rows:  120px 50px 120px 1fr;
+       
+    
+    }
+    .BookPage img {
+        justify-self: start;
+    }
+
+    .categories {
+        grid-area: category;
+        color: rgb(161, 161, 161);
+        justify-self: start;
+        align-self: start;
+        text-align: left;
+    }
+
+    .authors {
+        grid-area: author;
+        font-weight: bold;
+        justify-self: start;
+        align-self: start;
+        text-align: left;
+    }
+    
+    .title {
+        grid-area: title;
+        text-decoration: underline;
+        justify-self: start;
+        align-self: start;
+        text-align: left;
+    }
+    .description {
+       margin: 0 15px;
+    }
+}
+@media (max-width: 680px) {
+
+    .BookPage, .loaderBookPage  {
+        grid-template-areas:    "img "
+                                "category"
+                                "title"
+                                "author"
+                                "description";
+       grid-template-columns: 1fr;
+       grid-template-rows:  300px 120px 50px 1fr;
+       
+    
+    }
+
+    .emptyBlock, .BookPage img, .categories, .title, .authors, .loaderBookPage div:first-child, .loaderBookPage div:nth-child(2), .loaderBookPage div:nth-child(3), .loaderBookPage div:nth-child(4), .loaderBookPage div:nth-child(5) {
+        justify-self: center;
+    }
+}
+
+
+@keyframes load {
+    0% {background: rgb(224, 224, 224);}
+    50% {background: rgb(245, 245, 245);}
+    100% {background: rgb(224, 224, 224);}
+}
