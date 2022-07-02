@@ -20,7 +20,7 @@ export function* sagaPagination() {
 
     const {input, numStart, numEnd, category, sorting} = yield select(state => state.inputReducer)
         try {
-            const {data}: dataInterface = yield call(() => axios.get(`https://www.googleapis.com/books/v1/volumes?q=${input}+subject:${category}&orderBy=${sorting}&startIndex=${numStart}&maxResults=${numEnd}&key=AIzaSyDvFP6lJxNM73UsQC4cb3iTDMoSzMiB9_4`))
+            const {data}: dataInterface = yield call(() => axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${input}+subject:${category}&startIndex=${numStart}&maxResults=${numEnd}&orderBy=${sorting}&key=AIzaSyDvFP6lJxNM73UsQC4cb3iTDMoSzMiB9_4`))
             yield put(fetchPagination(data.items))
             
         } catch(e) {
@@ -31,7 +31,7 @@ export function* sagaPagination() {
 export function* sagaFetchBooksList() {
     const {input, numStart, numEnd, category, sorting} = yield select(state => state.inputReducer)
     try {
-        const {data}: dataInterface = yield call(() => axios.get(`https://www.googleapis.com/books/v1/volumes?q=${input}+subject:${category}&orderBy=${sorting}&startIndex=${numStart}&maxResults=${numEnd}&key=AIzaSyDvFP6lJxNM73UsQC4cb3iTDMoSzMiB9_4`))
+        const {data}: dataInterface = yield call(() => axios.get(`https://www.googleapis.com/books/v1/volumes?q=intitle:${input}+subject:${category}&startIndex=${numStart}&maxResults=${numEnd}&orderBy=${sorting}&key=AIzaSyDvFP6lJxNM73UsQC4cb3iTDMoSzMiB9_4`))
         yield put(fetchSuccess(data.items))
         yield put(total(data.totalItems))
     } catch(e) {
